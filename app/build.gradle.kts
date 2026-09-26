@@ -56,6 +56,11 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    // Flutter Module (Added for Add-to-App)
+    // This assumes the flutter module is successfully included in settings.gradle.kts
+    // Uncomment this line AFTER you have run the `flutter create -t module` command in your terminal
+    // implementation(project(":flutter"))
+
     // Supabase
     implementation(platform("io.github.jan-tennert.supabase:bom:3.0.0"))
     implementation("io.github.jan-tennert.supabase:postgrest-kt")

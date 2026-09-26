@@ -24,4 +24,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "Smart Life Academy"
 include(":app")
+
+// Include the Flutter module (assumes it is created one level up as 'smart_life_flutter')
+val flutterProjectRoot = file("../smart_life_flutter")
+val flutterSettings = File(flutterProjectRoot, ".android/include_flutter.groovy")
+if (flutterSettings.exists()) {
+    apply(from = flutterSettings)
+}
  
